@@ -1,0 +1,51 @@
+﻿<Window x:Class="AGCSW.fAbout" x:ClassModifier="internal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="About" SizeToContent="WidthAndHeight" Background="DarkGray" Name="Window1" Loaded="Window1_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="DarkGray">
+        <GroupBox Margin="12,12,12,39" Name="GroupBox1">
+            <StackPanel Margin="5,10,5,5">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="16" Width="16" HorizontalAlignment="Left" Name="picIcon" VerticalAlignment="Top" />
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="2" Name="lblTitle1" VerticalAlignment="Top" FontWeight="Bold" FontSize="11" Padding="2">ActiveGanttCSW Scheduler Control, Version 2.0</Label>
+                        <Label Grid.Row="1" Grid.Column="2" Name="lblTitle2" VerticalAlignment="Top" FontSize="11" Padding="2">WPF Control</Label>
+                        <Label Grid.Row="2" Grid.Column="2" Name="lblCopyright" VerticalAlignment="Top" FontSize="11" Padding="2">Copyright ©2002-2011, The Source Code Store LLC</Label>
+                    </Grid>
+                </StackPanel>
+                <Grid>
+                    <Label Name="lblURL" HorizontalAlignment="Center" Foreground="Blue" FontSize="11" Padding="10" MouseUp="lblURL_MouseUp">http://www.sourcecodestore.com</Label>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" Padding="2" Name="lblRegister" VerticalAlignment="Bottom" Foreground="Blue" FontWeight="Bold" FontSize="11" MouseUp="lblRegister_MouseUp">Secure Online Order Form</Label>
+                    <Label Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Padding="2" Name="lblTechnicalSupport" VerticalAlignment="Bottom" Foreground="Blue" FontSize="11" MouseUp="lblTechnicalSupport_MouseUp">support@sourcecodestore.com</Label>
+                    <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Padding="2" Name="lblSales" VerticalAlignment="Bottom" Foreground="Blue" FontSize="11" MouseUp="lblSales_MouseUp">sales@sourcecodestore.com</Label>
+
+                    <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Padding="2" Name="lblRegisterCaption" VerticalAlignment="Bottom" FontSize="11">Register:</Label>
+                    <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Padding="2" Name="lblTechnicalSupportCaption" VerticalAlignment="Bottom" FontSize="11">Technical Support:</Label>
+                    <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Padding="2" Name="lblSalesCaption" VerticalAlignment="Bottom" FontSize="11">Sales:</Label>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+        <Button Height="22" Width="87" HorizontalAlignment="Right" Margin="0,0,12,10" Name="cmdOK" VerticalAlignment="Bottom" Click="cmdOK_Click">OK</Button>
+    </Grid>
+</Window>

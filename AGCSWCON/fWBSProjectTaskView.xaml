@@ -1,0 +1,14 @@
+﻿<Window x:Class="AGCSWCON.fWBSProjectTaskView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    TextOptions.TextFormattingMode="Display"
+    TextOptions.TextRenderingMode="ClearType"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterOwner"
+    Title="fWBSProjectTaskView" Height="373" Width="431" Name="Window1" Background="#FFFFFFFF" Loaded="Window1_Loaded">
+    <Canvas Name="oCanvas" Background="#FFFFFFFF">
+        <TextBox Canvas.Left="37" Canvas.Top="12" Height="22" Name="txtTaskName" Width="372" />
+        <Label Foreground="Black" Canvas.Left="0" Canvas.Top="12" Height="22" Name="Label1" Width="81">Task:</Label>
+        <Button Canvas.Left="311" Canvas.Top="296" Height="27" Name="cmdOK" Width="98" Background="White" Click="cmdOK_Click">OK</Button>
+    </Canvas>
+</Window>

@@ -1,0 +1,97 @@
+﻿<Window x:Class="AGCSWCON.fPrintDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    TextOptions.TextFormattingMode="Display"
+    TextOptions.TextRenderingMode="ClearType"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterOwner"
+    Title="Printer Settings" Height="601" Width="721" Background="#FFFFFFFF" BorderBrush="#FFFFFFFF" BorderThickness="1" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
+    <Canvas Height="541" Width="691">
+        <Frame Canvas.Left="0" Canvas.Top="0" Height="140"  Width="679" BorderBrush="Gray" BorderThickness="1" />
+        <Frame Canvas.Left="467" Canvas.Top="380" Height="126"  Width="212" BorderThickness="1" BorderBrush="Gray" />
+        <Frame Canvas.Left="0" Canvas.Top="146" Height="83"  Width="461" BorderThickness="1" BorderBrush="Gray" />
+        <Frame Canvas.Left="0" Canvas.Top="235" Height="271"  Width="461" BorderThickness="1" BorderBrush="Gray" />
+        <Frame Canvas.Left="467" Canvas.Top="146" Height="83"  Width="212" BorderThickness="1" BorderBrush="Gray" />
+        <Frame Canvas.Left="467" Canvas.Top="235" Height="139"  Width="212" BorderThickness="1" BorderBrush="Gray" />
+        <Label Height="28" Margin="31,32,127,0" Name="Label1" VerticalAlignment="Top" Canvas.Left="130" Canvas.Top="113" Width="31">MM</Label>
+        <Label Height="28" Margin="61,77,97,0" Name="Label2" VerticalAlignment="Top" Canvas.Left="161" Canvas.Top="68" Width="31">DD</Label>
+        <Label Height="27" Margin="121,0,37,92" Name="Label3" VerticalAlignment="Bottom" Canvas.Left="-36" Canvas.Top="145" Width="45">YYYY</Label>
+        <Label Canvas.Left="145" Canvas.Top="166" Height="22" Name="Label4" Width="18">/</Label>
+        <Label Canvas.Left="209" Canvas.Top="165" Height="22" Name="Label5" Width="18">/</Label>
+        <Label Canvas.Left="14" Canvas.Top="163" Height="22" Name="Label6" Width="103">Start Date:</Label>
+        <Label Canvas.Left="145" Canvas.Top="196" Height="22" Name="Label7" Width="18">/</Label>
+        <Label Canvas.Left="209" Canvas.Top="196" Height="22" Name="Label8" Width="18">/</Label>
+        <Label Canvas.Left="14" Canvas.Top="192" Height="22" Name="Label9" Width="103">End Date:</Label>
+        <Button Canvas.Left="146" Canvas.Top="520" Height="21" Name="cmdSaveXPS" Width="93" Click="cmdSaveXPS_Click">Save as XPS...</Button>
+        <Button Canvas.Left="486" Canvas.Top="520" Height="21" Name="cmdOK" Width="93" Click="cmdOK_Click">OK</Button>
+        <Button Canvas.Left="387" Canvas.Top="520" Height="21" Name="cmdPreview" Width="93" Click="cmdPreview_Click">Preview..</Button>
+        <Button Canvas.Left="586" Canvas.Top="520" Height="21" Name="cmdCancel" Width="93" Click="cmdCancel_Click">Cancel</Button>
+        <Label Canvas.Left="280" Canvas.Top="145" Height="28" Name="Label10" Width="31">hh</Label>
+        <Label Canvas.Left="341" Canvas.Top="143" Height="28" Name="Label11" Width="31">mm</Label>
+        <Label Canvas.Left="402" Canvas.Top="143" Height="28" Name="Label12" Width="31">ss</Label>
+        <Label Canvas.Left="325" Canvas.Top="163" Height="24" Name="Label13" Width="18">:</Label>
+        <Label Canvas.Left="325" Canvas.Top="193" Height="24" Name="Label14" Width="18">:</Label>
+        <Label Canvas.Left="387" Canvas.Top="162" Height="24" Name="Label15" Width="18">:</Label>
+        <Label Canvas.Left="387" Canvas.Top="194" Height="24" Name="Label16" Width="18">:</Label>
+        <Label Canvas.Left="13" Canvas.Top="79" Height="22" Name="Label19" Width="104">Scale:</Label>
+        <TextBox Canvas.Left="550" Canvas.Top="470" Height="22" Name="txtStartPage" Width="31" GotFocus="txtStartPage_GotFocus" />
+        <TextBox Canvas.Left="612" Canvas.Top="470" Height="22" Name="txtEndPage" Width="33" GotFocus="txtEndPage_GotFocus" />
+        <Label Canvas.Left="587" Canvas.Top="470" ClipToBounds="True" Height="22" Name="Label21" Width="30" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">To:</Label>
+        <Label Canvas.Left="480" Canvas.Top="391" Height="28" Name="lblNumberOfPages" Width="120">Total Pages:</Label>
+        <Button Canvas.Left="256" Canvas.Top="520" Content="XPS Doc Preview.." Height="21" Name="cmdXPSPreview" Width="116" Click="cmdXPSPreview_Click" />
+        <Label Canvas.Left="13" Canvas.Top="12" Content="Name:" Height="22" Name="Label17" Width="67" />
+        <ComboBox Canvas.Left="106" Canvas.Top="12" Height="22" Name="cboPrinters" Width="539" SelectionChanged="cboPrinters_SelectionChanged" />
+        <Label Canvas.Left="13" Canvas.Top="46" Content="Orientation:" Height="22" Name="Label18" Width="152" />
+        <ComboBox Canvas.Left="107" Canvas.Top="46" Height="22" Name="cboOrientation" Width="241" SelectionChanged="cboOrientation_SelectionChanged" />
+        <xctk:IntegerUpDown Canvas.Left="107" Canvas.Top="79" Height="22" Name="numScale" Width="61" ValueChanged="numScale_ValueChanged" />
+        <Label Canvas.Left="174" Canvas.Top="79" Content="%" Height="26" Name="Label22" Width="44" />
+        <ComboBox Canvas.Left="107" Canvas.Top="109" Height="22" Name="cboResolution" Width="241" SelectionChanged="cboResolution_SelectionChanged" />
+        <Label Canvas.Left="13" Canvas.Top="109" Content="Resolution:" Height="22" Name="Label23" Width="79" />
+        <xctk:IntegerUpDown Canvas.Left="84" Canvas.Top="166" Height="22" Name="numSDYear" Width="62" Text="" />
+        <xctk:IntegerUpDown Canvas.Left="85" Canvas.Top="195" Height="22" Name="numEDYear" Text="" Width="62" />
+        <xctk:IntegerUpDown Canvas.Left="161" Canvas.Top="166" Height="22" Name="numSDMonth" Text="" Width="46" />
+        <xctk:IntegerUpDown Canvas.Left="161" Canvas.Top="195" Height="22" Name="numEDMonth" Text="" Width="46" />
+        <xctk:IntegerUpDown Canvas.Left="222" Canvas.Top="166" Height="22" Name="numSDDay" Text="" Width="46" />
+        <xctk:IntegerUpDown Canvas.Left="222" Canvas.Top="195" Height="22" Name="numEDDay" Text="" Width="46" />
+        <xctk:IntegerUpDown Canvas.Left="280" Canvas.Top="166" Height="22" Name="numSDHour" Text="" Width="46" />
+        <xctk:IntegerUpDown Canvas.Left="280" Canvas.Top="195" Height="22" Name="numEDHour" Text="" Width="46" />
+        <xctk:IntegerUpDown Canvas.Left="341" Canvas.Top="166" Height="22" Name="numSDMinute" Text="" Width="46" />
+        <xctk:IntegerUpDown Canvas.Left="341" Canvas.Top="195" Height="22" Name="numEDMinute" Text="" Width="46" />
+        <xctk:IntegerUpDown Canvas.Left="402" Canvas.Top="166" Height="22" Name="numSDSecond" Text="" Width="46" />
+        <xctk:IntegerUpDown Canvas.Left="402" Canvas.Top="195" Height="22" Name="numEDSecond" Text="" Width="46" />
+        <Label Canvas.Left="480" Canvas.Top="164" Content="Start Row:" Height="22" Name="Label24" Width="76" />
+        <Label Canvas.Left="480" Canvas.Top="193" Content="End Row:" Height="22" Name="Label25" Width="76" />
+        <xctk:IntegerUpDown Canvas.Left="588" Canvas.Top="166" Height="22" Name="numStartRow" Width="57" ValueChanged="numStartRow_ValueChanged" />
+        <xctk:IntegerUpDown Canvas.Left="588" Canvas.Top="196" Height="22" Name="numEndRow" Width="57" ValueChanged="numEndRow_ValueChanged" />
+        <Label Canvas.Left="480" Canvas.Top="247" Content="Margin Left:" Height="22"  Width="89" Padding="5,0,5,5" />
+        <Label Canvas.Left="480" Canvas.Top="275" Content="Margin Top:" Height="22"  Width="89" Padding="5,0,5,5" />
+        <Label Canvas.Left="480" Canvas.Top="303" Content="Margin Right:" Height="22" Padding="5,0,5,5" Width="89" />
+        <Label Canvas.Left="480" Canvas.Top="331" Content="Margin Bottom:" Height="22" Padding="5,0,5,5" Width="101" />
+        <xctk:DecimalUpDown Canvas.Left="587" Canvas.Top="331" Height="22" Name="numMarginBottom" Width="58" ValueChanged="numMarginBottom_ValueChanged" />
+        <xctk:DecimalUpDown Canvas.Left="587" Canvas.Top="303" Height="22" Name="numMarginRight" Width="58" ValueChanged="numMarginRight_ValueChanged" />
+        <xctk:DecimalUpDown Canvas.Left="587" Canvas.Top="275" Height="22" Name="numMarginTop" Width="58" ValueChanged="numMarginTop_ValueChanged" />
+        <xctk:DecimalUpDown Canvas.Left="587" Canvas.Top="247" Height="22" Name="numMarginLeft" Width="58" ValueChanged="numMarginLeft_ValueChanged" />
+        <CheckBox Canvas.Left="14" Canvas.Top="250" Content="Show all columns" Height="22" Name="chkShowAllColumns" Width="124" Click="chkShowAllColumns_Click" />
+        <CheckBox Canvas.Left="14" Canvas.Top="275" Content="Columns in every page" Height="22" Name="chkColumnsInEveryPage" Width="207" Click="chkColumnsInEveryPage_Click" />
+        <Label Canvas.Left="14" Canvas.Top="298" Content="Number of columns:" Height="22" Name="Label26" Width="153" />
+        <xctk:IntegerUpDown Canvas.Left="146" Canvas.Top="303" Height="22" Name="numColumns" Text="" Width="46" ValueChanged="numColumns_ValueChanged" />
+        <CheckBox Canvas.Left="14" Canvas.Top="332" Content="Keep columns together" Height="22" Name="chkKeepColumnsTogether" Width="273" Click="chkKeepColumnsTogether_Click" />
+        <CheckBox Canvas.Left="14" Canvas.Top="360" Content="Keep time intervals together" Height="19" Name="chkKeepTimeIntervalsTogether" Width="185" Click="chkKeepTimeIntervalsTogether_Click" />
+        <Label Canvas.Left="12" Canvas.Top="380" Content="Interval:" Height="22" Name="lblInterval" Width="211" />
+        <Label Canvas.Left="13" Canvas.Top="408" Content="Factor:" Height="22" Name="lblFactor" Width="183" />
+        <CheckBox Canvas.Left="12" Canvas.Top="442" Content="Headings in every page" Height="22" Name="chkHeadingsInEveryPage" Width="203" Click="chkHeadingsInEveryPage_Click" />
+        <CheckBox Canvas.Left="13" Canvas.Top="470" Content="Keep rows together" Height="22" Name="chkKeepRowsTogether" Width="150" Click="chkKeepRowsTogether_Click" />
+        <ComboBox Canvas.Left="94" Canvas.Top="380" Height="22" Name="cboInterval" Width="159" SelectionChanged="cboInterval_SelectionChanged" />
+        <xctk:IntegerUpDown Canvas.Left="94" Canvas.Top="410" Height="22" Name="numFactor" Text="" Width="46" ValueChanged="numFactor_ValueChanged" />
+        <RadioButton Canvas.Left="486" Canvas.Top="470" Content="From:" Height="22" Name="optFrom" Width="51" GroupName="Print" />
+        <RadioButton Canvas.Left="486" Canvas.Top="442" Content="All" Height="22" Name="optAll" Width="95" GroupName="Print" />
+        <Label Canvas.Left="353" Canvas.Top="109" Content="Horizontal DPI:" Height="22" Name="lblDPIX" Width="89" />
+        <Label Canvas.Left="511" Canvas.Top="109" Content="Vertical DPI:" Height="22" Name="lblDPIY" Width="89" />
+        <xctk:IntegerUpDown Canvas.Left="444" Canvas.Top="109" Height="22" Name="numDPIX" Width="61" ValueChanged="numDPIX_ValueChanged" />
+        <xctk:IntegerUpDown Canvas.Left="584" Canvas.Top="109" Height="22" Name="numDPIY" Width="61" ValueChanged="numDPIY_ValueChanged" />
+        <Label Canvas.Left="651" Canvas.Top="247" Content="&quot;" Height="22" Name="Label30" Width="17" VerticalAlignment="Top" Padding="5,0,5,5" />
+        <Label Canvas.Left="651" Canvas.Top="275" Content="&quot;" Height="22" Name="Label31" Padding="5,0,5,5" Width="17" />
+        <Label Canvas.Left="651" Canvas.Top="303" Content="&quot;" Height="22" Name="Label32" Padding="5,0,5,5" Width="17" />
+        <Label Canvas.Left="651" Canvas.Top="332" Content="&quot;" Height="22" Name="Label33" Padding="5,0,5,5" Width="17" />
+    </Canvas>
+</Window>

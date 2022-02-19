@@ -1,0 +1,11 @@
+﻿<Window x:Class="AGCSWCON.fCustomTickMarkAreaDraw"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:AGCSW="clr-namespace:AGCSW;assembly=AGCSW"
+        Title="Custom TickMarkArea Draw" Height="470" Width="780" Background="#FFFFFFFF" Loaded="Window_Loaded">
+    <Border Margin="10,10,10,10" BorderBrush="White" BorderThickness="1">
+        <Grid Margin="10,10,10,10" Name="AGContainerGrid">
+            <AGCSW:ActiveGanttCSWCtl Name="ActiveGanttCSWCtl1" CustomTickMarkAreaDraw="ActiveGanttCSWCtl1_CustomTickMarkAreaDraw" CustomTickMarkDraw="ActiveGanttCSWCtl1_CustomTickMarkDraw" />
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B28E9F9-78A1-41FA-B148-544C3181C7CB}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AGCSW</RootNamespace>
+    <AssemblyName>AGCSW</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\AGCSWCON\AGCSW\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DemoVersion</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\AGCSWCON\AGCSW\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SCSDemo|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\AGCSWCON\AGCSW\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DemoVersion SCSDemo</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SCSCustomer|AnyCPU'">
+    <OutputPath>..\AGCSWCON\AGCSW\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsButtonBorderStyle.cs" />
+    <Compile Include="clsButtonState.cs" />
+    <Compile Include="clsCell.cs" />
+    <Compile Include="clsCells.cs" />
+    <Compile Include="clsClientArea.cs" />
+    <Compile Include="clsCollectionBase.cs" />
+    <Compile Include="clsColumn.cs" />
+    <Compile Include="clsColumns.cs" />
+    <Compile Include="clsConfiguration.cs" />
+    <Compile Include="clsCustomBorderStyle.cs" />
+    <Compile Include="clsDictionary.cs" />
+    <Compile Include="clsDrawing.cs" />
+    <Compile Include="clsGraphics.cs" />
+    <Compile Include="clsGrid.cs" />
+    <Compile Include="clsHorizontalScrollBar.cs" />
+    <Compile Include="clsHScrollBarTemplate.cs" />
+    <Compile Include="clsItemBase.cs" />
+    <Compile Include="clsLayer.cs" />
+    <Compile Include="clsLayers.cs" />
+    <Compile Include="clsMath.cs" />
+    <Compile Include="clsMilestoneStyle.cs" />
+    <Compile Include="clsMouseKeyboardEvents.cs" />
+    <Compile Include="clsNode.cs" />
+    <Compile Include="clsPercentage.cs" />
+    <Compile Include="clsPercentages.cs" />
+    <Compile Include="clsPredecessor.cs" />
+    <Compile Include="clsPredecessors.cs" />
+    <Compile Include="clsPredecessorStyle.cs" />
+    <Compile Include="clsPrinter.cs" />
+    <Compile Include="clsProgressLine.cs" />
+    <Compile Include="clsRow.cs" />
+    <Compile Include="clsRows.cs" />
+    <Compile Include="clsScrollBarSeparator.cs" />
+    <Compile Include="clsScrollBarStyle.cs" />
+    <Compile Include="clsSelectionRectangleStyle.cs" />
+    <Compile Include="clsSplitter.cs" />
+    <Compile Include="clsStyle.cs" />
+    <Compile Include="clsStyles.cs" />
+    <Compile Include="clsTask.cs" />
+    <Compile Include="clsTasks.cs" />
+    <Compile Include="clsTaskStyle.cs" />
+    <Compile Include="clsTextBox.cs" />
+    <Compile Include="clsTextFlags.cs" />
+    <Compile Include="clsTickMark.cs" />
+    <Compile Include="clsTickMarkArea.cs" />
+    <Compile Include="clsTickMarks.cs" />
+    <Compile Include="clsTier.cs" />
+    <Compile Include="clsTierAppearance.cs" />
+    <Compile Include="clsTierArea.cs" />
+    <Compile Include="clsTierColor.cs" />
+    <Compile Include="clsTierColors.cs" />
+    <Compile Include="clsTierFormat.cs" />
+    <Compile Include="clsTimeBlock.cs" />
+    <Compile Include="clsTimeBlocks.cs" />
+    <Compile Include="clsTimeLine.cs" />
+    <Compile Include="clsTimeLineScrollBar.cs" />
+    <Compile Include="clsToolTip.cs" />
+    <Compile Include="clsTreeview.cs" />
+    <Compile Include="clsVerticalScrollBar.cs" />
+    <Compile Include="clsView.cs" />
+    <Compile Include="clsViews.cs" />
+    <Compile Include="clsVScrollBarTemplate.cs" />
+    <Compile Include="clsXML.cs" />
+    <Compile Include="ControlTemplateGradient.cs" />
+    <Compile Include="ControlTemplateSolid.cs" />
+    <Compile Include="CustomTickMarkAreaDrawEventArgs.cs" />
+    <Compile Include="CustomTierDrawEventArgs.cs" />
+    <Compile Include="DrawEventArgs.cs" />
+    <Compile Include="ErrorEventArgs.cs" />
+    <Compile Include="fAbout.xaml.cs">
+      <DependentUpon>fAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Font.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="KeyEventArgs.cs" />
+    <Compile Include="MouseEventArgs.cs" />
+    <Compile Include="MouseWheelEventArgs.cs" />
+    <Compile Include="NodeEventArgs.cs" />
+    <Compile Include="ObjectAddedEventArgs.cs" />
+    <Compile Include="ObjectSelectedEventArgs.cs" />
+    <Compile Include="ObjectStateChangedEventArgs.cs" />
+    <Compile Include="PagePrintEventArgs.cs" />
+    <Compile Include="PredecessorDrawEventArgs.cs" />
+    <Compile Include="PredecessorExceptionEventArgs.cs" />
+    <Compile Include="ScrollEventArgs.cs" />
+    <Compile Include="Templates.cs" />
+    <Compile Include="TextEditEventArgs.cs" />
+    <Compile Include="TickMarkTextDrawEventArgs.cs" />
+    <Compile Include="ToolTipEventArgs.cs" />
+    <Page Include="ActiveGanttCSWCtl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="ActiveGanttCSWCtl.xaml.cs">
+      <DependentUpon>ActiveGanttCSWCtl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="fAbout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="AGCSW.reg" />
+    <None Include="AGCSW.snk" />
+    <None Include="AGCSWPublic.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="C_WAIT05.CUR" />
+    <EmbeddedResource Include="DRAGMOVE.CUR" />
+    <EmbeddedResource Include="HO_SPLIT.CUR" />
+    <EmbeddedResource Include="PERCENTAGE.CUR" />
+    <EmbeddedResource Include="PREDECESSOR.CUR" />
+    <EmbeddedResource Include="VE_SPLIT.CUR" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AG.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

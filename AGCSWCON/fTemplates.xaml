@@ -1,0 +1,23 @@
+﻿<Window x:Class="AGCSWCON.fTemplates"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:AGCSW="clr-namespace:AGCSW;assembly=AGCSW"
+        Title="Available Templates" Height="700" Width="767" WindowStartupLocation="CenterOwner" ResizeMode="CanResize" Loaded="Window_Loaded">
+    <Grid>
+    <Rectangle Height="27" Margin="0,0,0,0" Name="Rectangle1" Fill="#FF9caac1" VerticalAlignment="Top"></Rectangle>
+    <ToolBar Height="26" Margin="0,0,78,0" Name="ToolBar1" VerticalAlignment="Top" Background="#FFbcc7d8">
+        <Label FontSize="9">Control Template:</Label>
+        <ComboBox Name="cboControlTemplates" Width="200" SelectionChanged="cboControlTemplates_SelectionChanged" />
+        <Label FontSize="9">Object Template:</Label>
+        <ComboBox Name="cboObjectTemplates" Width="200" SelectionChanged="cboObjectTemplates_SelectionChanged" />
+        <Button Name="cmdCopy" ToolTip="Copy to clipboard" Click="cmdCopy_Click">
+            <Image Width="16" Height="16" Source="images/ToolBars/copy.png"  />
+        </Button>
+    </ToolBar>
+    <Border Margin="10,30,10,10" BorderBrush="White" BorderThickness="1">
+        <Grid Name="AGContainerGrid" Margin="10,10,10,10">
+            <AGCSW:ActiveGanttCSWCtl Name="ActiveGanttCSWCtl1"/>
+        </Grid>
+    </Border>
+    </Grid>
+</Window>

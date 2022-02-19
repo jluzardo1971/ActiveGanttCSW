@@ -1,0 +1,12 @@
+﻿<Window x:Class="AGCSWCON.fSortRows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:AGCSW="clr-namespace:AGCSW;assembly=AGCSW"
+        Title="Sort Rows" Height="700" Width="767" WindowStartupLocation="CenterOwner" ResizeMode="CanResize" Loaded="Window_Loaded">
+    <Border Margin="10,10,10,10" BorderBrush="White" BorderThickness="1">
+        <Grid Name="AGContainerGrid" Margin="10,10,10,10">
+            <AGCSW:ActiveGanttCSWCtl Name="ActiveGanttCSWCtl1"/>
+            <Button Content="Sort Rows" Height="23" HorizontalAlignment="Right" Name="cmdSortRows" VerticalAlignment="Bottom" Width="150" Click="cmdSortRows_Click" />
+        </Grid>
+    </Border>
+</Window>

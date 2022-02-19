@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3003FBAC-C012-4CC7-9126-1035DF9F82A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AGCSWCON</RootNamespace>
+    <AssemblyName>AGCSWCON</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SCSDemo|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SCSCustomer|x86'">
+    <OutputPath>bin\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SCSDemo|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SCSCustomer|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AGCSW">
+      <HintPath>AGCSW\AGCSW.dll</HintPath>
+    </Reference>
+    <Reference Include="MSP2003">
+      <HintPath>AGCSW\MSP2003.dll</HintPath>
+    </Reference>
+    <Reference Include="MSP2007">
+      <HintPath>AGCSW\MSP2007.dll</HintPath>
+    </Reference>
+    <Reference Include="MSP2010">
+      <HintPath>AGCSW\MSP2010.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>WPFToolkit\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="fCarRental.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fCarRentalBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fCarRentalReservation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fCarRentalVehicle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fCustomDrawing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fCustomTickMarkAreaDraw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fCustomTickMarkTextDraw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fDurationTasks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fFastLoading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fLoadXML.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsCmdBuilder.cs" />
+    <Compile Include="clsCR_Objects.cs" />
+    <Compile Include="clsCR_Row.cs" />
+    <Compile Include="clsCR_Rows.cs" />
+    <Compile Include="clsCR_Task.cs" />
+    <Compile Include="clsCR_Tasks.cs" />
+    <Compile Include="fCustomTickMarkAreaDraw.xaml.cs">
+      <DependentUpon>fCustomTickMarkAreaDraw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fCustomTickMarkTextDraw.xaml.cs">
+      <DependentUpon>fCustomTickMarkTextDraw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fPrintPreviewXPS.xaml.cs">
+      <DependentUpon>fPrintPreviewXPS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fSTL_Anakiwa_Blue.xaml.cs">
+      <DependentUpon>fSTL_Anakiwa_Blue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fSTL_CR.xaml.cs">
+      <DependentUpon>fSTL_CR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fSTL_MSP2003.xaml.cs">
+      <DependentUpon>fSTL_MSP2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fSTL_MSP2007.xaml.cs">
+      <DependentUpon>fSTL_MSP2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fSTL_MSP2010.xaml.cs">
+      <DependentUpon>fSTL_MSP2010.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fTemplates.xaml.cs">
+      <DependentUpon>fTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="modData.cs" />
+    <Compile Include="fCarRental.xaml.cs">
+      <DependentUpon>fCarRental.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fCarRentalBranch.xaml.cs">
+      <DependentUpon>fCarRentalBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fCarRentalReservation.xaml.cs">
+      <DependentUpon>fCarRentalReservation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fCarRentalVehicle.xaml.cs">
+      <DependentUpon>fCarRentalVehicle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fCustomDrawing.xaml.cs">
+      <DependentUpon>fCustomDrawing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fDurationTasks.xaml.cs">
+      <DependentUpon>fDurationTasks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fFastLoading.xaml.cs">
+      <DependentUpon>fFastLoading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fLoadXML.xaml.cs">
+      <DependentUpon>fLoadXML.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fMain.xaml.cs">
+      <DependentUpon>fMain.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="fMillisecondInterval.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fMSProject11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fMSProject12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fMSProject14.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fPrintDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fPrintPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fPrintPreviewXPS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fRCT_DAY.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fRCT_MONTH.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fRCT_WEEK.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fRCT_YEAR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fSortRows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fSTL_Anakiwa_Blue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fSTL_CR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fSTL_MSP2003.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fSTL_MSP2007.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fSTL_MSP2010.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fWBSPProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fWBSProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fWBSProjectTaskView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fMillisecondInterval.xaml.cs">
+      <DependentUpon>fMillisecondInterval.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fMSProject11.xaml.cs">
+      <DependentUpon>fMSProject11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fMSProject12.xaml.cs">
+      <DependentUpon>fMSProject12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fMSProject14.xaml.cs">
+      <DependentUpon>fMSProject14.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fPrintDialog.xaml.cs">
+      <DependentUpon>fPrintDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fPrintPreview.xaml.cs">
+      <DependentUpon>fPrintPreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fRCT_DAY.xaml.cs">
+      <DependentUpon>fRCT_DAY.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fRCT_MONTH.xaml.cs">
+      <DependentUpon>fRCT_MONTH.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fRCT_WEEK.xaml.cs">
+      <DependentUpon>fRCT_WEEK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fRCT_YEAR.xaml.cs">
+      <DependentUpon>fRCT_YEAR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fSortRows.xaml.cs">
+      <DependentUpon>fSortRows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fWBSPProperties.xaml.cs">
+      <DependentUpon>fWBSPProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fWBSProject.xaml.cs">
+      <DependentUpon>fWBSProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fWBSProjectTaskView.xaml.cs">
+      <DependentUpon>fWBSProjectTaskView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="AGCSW.chm" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AGCSW\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AG.gif" />
+    <Resource Include="Images\bfolderopen.gif" />
+    <Resource Include="Images\inet.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CarRental\smallminus.gif" />
+    <Resource Include="Images\CarRental\smallplus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\back0.gif" />
+    <Resource Include="Images\Toolbars\back1.gif" />
+    <Resource Include="Images\Toolbars\back2.gif" />
+    <Resource Include="Images\Toolbars\close-form.gif" />
+    <Resource Include="Images\Toolbars\fwd0.gif" />
+    <Resource Include="Images\Toolbars\fwd1.gif" />
+    <Resource Include="Images\Toolbars\fwd2.gif" />
+    <Resource Include="Images\Toolbars\HelpIcon.gif" />
+    <Resource Include="Images\Toolbars\indent.gif" />
+    <Resource Include="Images\Toolbars\open.gif" />
+    <Resource Include="Images\Toolbars\percentage.gif" />
+    <Resource Include="Images\Toolbars\percentagegreen.gif" />
+    <Resource Include="Images\Toolbars\percentagered.gif" />
+    <Resource Include="Images\Toolbars\plusgreen.gif" />
+    <Resource Include="Images\Toolbars\plusred.gif" />
+    <Resource Include="Images\Toolbars\printer.gif" />
+    <Resource Include="Images\Toolbars\save.gif" />
+    <Resource Include="Images\Toolbars\tooltip.gif" />
+    <Resource Include="Images\Toolbars\zoomin.gif" />
+    <Resource Include="Images\Toolbars\zoomout.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WBS\folderclosed.gif" />
+    <Resource Include="Images\WBS\folderopen.gif" />
+    <Resource Include="Images\WBS\modules.gif" />
+    <Resource Include="Images\WBS\projectnote2003.gif" />
+    <Resource Include="Images\WBS\task.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sampleimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\check.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\properties.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\fwd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\zoomin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\zoomout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toolbars\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AGCSW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ActiveGanttExamples.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ActiveGanttExamples.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="CarRental\Big\Chrysler 300 Bright Silver.jpg" />
+    <Resource Include="CarRental\Big\Chrysler 300 Brilliant Black.jpg" />
+    <Resource Include="CarRental\Big\Chrysler 300 Clearwater Blue.jpg" />
+    <Resource Include="CarRental\Big\Escape Atlantis Blue.jpg" />
+    <Resource Include="CarRental\Big\Escape Hot Red.jpg" />
+    <Resource Include="CarRental\Big\Escape Metalic Sand.jpg" />
+    <Resource Include="CarRental\Big\Escape Panther Black.jpg" />
+    <Resource Include="CarRental\Big\Falcon XT Wagon Lightning Strike.jpg" />
+    <Resource Include="CarRental\Big\Falcon XT Wagon Sensation.jpg" />
+    <Resource Include="CarRental\Big\Falcon XT Wagon Silhoutte.jpg" />
+    <Resource Include="CarRental\Big\Falcon XT Wagon Steel.jpg" />
+    <Resource Include="CarRental\Big\Falcon XT Wagon Vixen.jpg" />
+    <Resource Include="CarRental\Big\Fiesta CL 3 Door Hydro.jpg" />
+    <Resource Include="CarRental\Big\Fiesta CL 3 Door Ocean.jpg" />
+    <Resource Include="CarRental\Big\Fiesta CL 3 Door Panther Black.jpg" />
+    <Resource Include="CarRental\Big\Fiesta CL 5 Door Frozen White.jpg" />
+    <Resource Include="CarRental\Big\Fiesta CL 5 Door Hydro.jpg" />
+    <Resource Include="CarRental\Big\Fiesta CL 5 Door Panther Black.jpg" />
+    <Resource Include="CarRental\Big\Fiesta CL 5 Door Squeeze.jpg" />
+    <Resource Include="CarRental\Big\Focus CL Hatch Black Sapphire.jpg" />
+    <Resource Include="CarRental\Big\Focus CL Hatch Colorado Red.jpg" />
+    <Resource Include="CarRental\Big\Focus CL Hatch Ocean.jpg" />
+    <Resource Include="CarRental\Big\Focus CL Hatch Tonic.jpg" />
+    <Resource Include="CarRental\Big\Focus CL Sedan Black Sapphire.jpg" />
+    <Resource Include="CarRental\Big\Focus CL Sedan Ocean.jpg" />
+    <Resource Include="CarRental\Big\Focus CL Sedan Satin White.jpg" />
+    <Resource Include="CarRental\Big\Focus CL Sedan Tango.jpg" />
+    <Resource Include="CarRental\Big\Focus CL Sedan Titanium Grey.jpg" />
+    <Resource Include="CarRental\Big\LR3 Alaska White.jpg" />
+    <Resource Include="CarRental\Big\LR3 Rimini Red.jpg" />
+    <Resource Include="CarRental\Big\LR3 Santorini Black.jpg" />
+    <Resource Include="CarRental\Big\Mondeo LX Colorado Red.jpg" />
+    <Resource Include="CarRental\Big\Mondeo LX Ink Blue.jpg" />
+    <Resource Include="CarRental\Big\Mondeo LX Sea Grey.jpg" />
+    <Resource Include="CarRental\Big\Pacifica Clearwater Blue.jpg" />
+    <Resource Include="CarRental\Big\Pacifica Modern Blue.jpg" />
+    <Resource Include="CarRental\Big\Pacifica Silver.jpg" />
+    <Resource Include="CarRental\Big\Range Rover HSE Alaska White.jpg" />
+    <Resource Include="CarRental\Big\Range Rover HSE Buckingham Blue.jpg" />
+    <Resource Include="CarRental\Big\Range Rover HSE Galway Green.jpg" />
+    <Resource Include="CarRental\Big\Range Rover HSE Rimini.jpg" />
+    <Resource Include="CarRental\Big\Range Rover HSE Santorini Black.jpg" />
+    <Resource Include="CarRental\Big\Range Rover HSE Zermatt Silver.jpg" />
+    <Resource Include="CarRental\Big\Territory TX RWD Ego.jpg" />
+    <Resource Include="CarRental\Big\Territory TX RWD Kashmir.jpg" />
+    <Resource Include="CarRental\Big\Territory TX RWD Silhouette.jpg" />
+    <Resource Include="CarRental\Big\Territory TX RWD Steel.jpg" />
+    <Resource Include="CarRental\Big\Territory TX RWD Winter White.jpg" />
+    <Resource Include="CarRental\Big\Town and Country Clearwater Blue.jpg" />
+    <Resource Include="CarRental\Big\Town and Country Inferno Red.jpg" />
+    <Resource Include="CarRental\Big\Town and Country Melbourne Green.jpg" />
+    <Resource Include="CarRental\Big\Town and Country Modern Blue.jpg" />
+    <Resource Include="CarRental\minus.gif" />
+    <Resource Include="CarRental\minus.jpg" />
+    <Resource Include="CarRental\plus.gif" />
+    <Resource Include="CarRental\plus.jpg" />
+    <Resource Include="CarRental\small\Chrysler 300 Bright Silver.jpg" />
+    <Resource Include="CarRental\small\Chrysler 300 Brilliant Black.jpg" />
+    <Resource Include="CarRental\small\Chrysler 300 Clearwater Blue.jpg" />
+    <Resource Include="CarRental\small\Escape Atlantis Blue.jpg" />
+    <Resource Include="CarRental\small\Escape Hot Red.jpg" />
+    <Resource Include="CarRental\small\Escape Metalic Sand.jpg" />
+    <Resource Include="CarRental\small\Escape Panther Black.jpg" />
+    <Resource Include="CarRental\small\Falcon XT Wagon Lightning Strike.jpg" />
+    <Resource Include="CarRental\small\Falcon XT Wagon Sensation.jpg" />
+    <Resource Include="CarRental\small\Falcon XT Wagon Silhoutte.jpg" />
+    <Resource Include="CarRental\small\Falcon XT Wagon Steel.jpg" />
+    <Resource Include="CarRental\small\Falcon XT Wagon Vixen.jpg" />
+    <Resource Include="CarRental\small\Fiesta CL 3 Door Hydro.jpg" />
+    <Resource Include="CarRental\small\Fiesta CL 3 Door Ocean.jpg" />
+    <Resource Include="CarRental\small\Fiesta CL 3 Door Panther Black.jpg" />
+    <Resource Include="CarRental\small\Fiesta CL 5 Door Frozen White.jpg" />
+    <Resource Include="CarRental\small\Fiesta CL 5 Door Hydro.jpg" />
+    <Resource Include="CarRental\small\Fiesta CL 5 Door Panther Black.jpg" />
+    <Resource Include="CarRental\small\Fiesta CL 5 Door Squeeze.jpg" />
+    <Resource Include="CarRental\small\Focus CL Hatch Black Sapphire.jpg" />
+    <Resource Include="CarRental\small\Focus CL Hatch Colorado Red.jpg" />
+    <Resource Include="CarRental\small\Focus CL Hatch Ocean.jpg" />
+    <Resource Include="CarRental\small\Focus CL Hatch Tonic.jpg" />
+    <Resource Include="CarRental\small\Focus CL Sedan Black Sapphire.jpg" />
+    <Resource Include="CarRental\small\Focus CL Sedan Ocean.jpg" />
+    <Resource Include="CarRental\small\Focus CL Sedan Satin White.jpg" />
+    <Resource Include="CarRental\small\Focus CL Sedan Tango.jpg" />
+    <Resource Include="CarRental\small\Focus CL Sedan Titanium Grey.jpg" />
+    <Resource Include="CarRental\small\LR3 Alaska White.jpg" />
+    <Resource Include="CarRental\small\LR3 Rimini Red.jpg" />
+    <Resource Include="CarRental\small\LR3 Santorini Black.jpg" />
+    <Resource Include="CarRental\small\Mondeo LX Colorado Red.jpg" />
+    <Resource Include="CarRental\small\Mondeo LX Ink Blue.jpg" />
+    <Resource Include="CarRental\small\Mondeo LX Sea Grey.jpg" />
+    <Resource Include="CarRental\small\Pacifica Clearwater Blue.jpg" />
+    <Resource Include="CarRental\small\Pacifica Modern Blue.jpg" />
+    <Resource Include="CarRental\small\Pacifica Silver.jpg" />
+    <Resource Include="CarRental\small\Range Rover HSE Alaska White.jpg" />
+    <Resource Include="CarRental\small\Range Rover HSE Buckingham Blue.jpg" />
+    <Resource Include="CarRental\small\Range Rover HSE Galway Green.jpg" />
+    <Resource Include="CarRental\small\Range Rover HSE Rimini.jpg" />
+    <Resource Include="CarRental\small\Range Rover HSE Santorini Black.jpg" />
+    <Resource Include="CarRental\small\Range Rover HSE Zermatt Silver.jpg" />
+    <Resource Include="CarRental\small\Territory TX RWD Ego.jpg" />
+    <Resource Include="CarRental\small\Territory TX RWD Kashmir.jpg" />
+    <Resource Include="CarRental\small\Territory TX RWD Silhouette.jpg" />
+    <Resource Include="CarRental\small\Territory TX RWD Steel.jpg" />
+    <Resource Include="CarRental\small\Territory TX RWD Winter White.jpg" />
+    <Resource Include="CarRental\small\Town and Country Clearwater Blue.jpg" />
+    <Resource Include="CarRental\small\Town and Country Inferno Red.jpg" />
+    <Resource Include="CarRental\small\Town and Country Melbourne Green.jpg" />
+    <Resource Include="CarRental\small\Town and Country Modern Blue.jpg" />
+    <Content Include="WPFToolkit\Xceed.Wpf.Toolkit.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
